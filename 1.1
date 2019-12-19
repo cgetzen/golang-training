@@ -1,0 +1,45 @@
+# Go Setup
+
+## Local install (macOS)
+
+The easiest way to install go is with [brew](https://brew.sh), macOS' package manager.
+
+```bash
+brew install go
+```
+
+To ensure it has been installed, you can type:
+```bash
+go version
+# or
+go env
+```
+
+## Exercises
+
+Where is go _actually_ installed? See anything in `go env` that is similar?
+
+Hints:
+- `which <command>` locates a binary.
+- `ls -l <file>` will tell you if it's a symlink.
+- a symlink can point to another symlink!
+
+## Further reading
+
+The [go playground](https://play.golang.org/) is a great resource to quickly test snippets ofcode.
+
+---
+
+
+
+Notes:
+go version, but also go production structure
+environment Variables
+`go env`
+`which go`
+"unit test" -> practice example
+
+Preface
+branch vs fork
+CI in monorepo thoughts
+make it easy to go through the repo and just do self-eval

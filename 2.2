@@ -1,0 +1,134 @@
+# Variables
+
+
+## Concepts
+
+Golang is statically typed: the compiler needs to know all the types during compilation.
+
+Go can either infer the type, or the developer can explicitly tell the compiler what the type is when declaring variables.
+
+|  | Inferred Type | Explicit Type |
+|--|--|--|
+|Declaration |  impossible | `var x int` |
+|Declaration and assignment | `var x = 4`<br>or<br>`x := 4`| `var x int = 4`
+| Assignment | `x = 4`<br>(inferred from declaration) | impossible |
+
+The last row, assignment, can only be done after the variable has been declared:
+
+```go
+var x int       // declare
+x = 4           // assign
+
+var y int = 5   // declare and assign
+y = 6           // assign
+
+z := 7          // declare and assign
+z = 8           // assign
+
+e = 1           // undefined: e
+```
+
+## Zero Values
+
+What is the value of a variable when you have declared but not assigned?
+
+Exercise: Discover the zero values of `int`, `float64`, `bool` and `string` by writing a go program
+
+Tips:
+- you will want to declare but not assign variables
+- you can use `fmt.Println` to see the values
+
+## Multiple variables
+
+
+Similar to `import`, there is a shorthand to declare multiple variables:
+
+```go
+var (
+  x int
+  y string = "hello"
+  z float64 = 2.1
+)
+```
+
+## Constants
+
+To declare constants, you can use the keyword `const`:
+
+```go
+const x = 4
+const y float64 = 4
+const (
+  a = "hello"
+  b = "hello"
+  c = "hello"
+)
+```
+
+One difference between const and var: expressions are implicitly repeated in a paren­thesized const declaration
+
+```go
+const (
+  a = "hello"
+  b
+  c
+)
+```
+
+## iota
+
+`iota` represents successive integer constants 0, 1, 2 ... and is reset after every occurrence of the `const` keyword.
+
+```go
+const (
+  zero = 0
+  one = 1
+  two = 2
+)
+```
+can be written as
+```go
+const (
+  zero = iota
+  one
+  two
+)
+```
+
+You can also take advantage of `iota` in more complex expressions:
+
+```go
+const (
+  one = iota + 1
+  two
+  three
+)
+```
+
+Variables and constants can be declared at the package level, or the function level.
+
+```go
+package main
+
+import "fmt"
+
+var (
+  x int = 4
+)
+
+func main() {
+  printX()
+}
+
+func printX() {
+  fmt.Println(x)
+}
+```
+
+## Exercises
+
+## Tips
+
+## Further Reading
+
+- variable lifecycle / GC
