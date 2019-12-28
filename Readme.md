@@ -1,5 +1,9 @@
 # Go Training
 
+## Verification
+
+Each module will have a `test/` folder. To verify your knowledge, please create a branch and ensure that each `test/` passes CI. The completion board will be updated nightly.
+
 ## Organization
 
 Each module has the following sections:
@@ -76,6 +80,6 @@ Module 5 - Concurrency
   - Once
   - WaitGroup
 
-## Verification
+## Issues and Errors
 
-Each module will have a `test/` folder. To verify your knowledge, please create a branch with "test" in the name and ensure that each `test/` passes CI. The completion board will be updated nightly.
+Is something explained poorly? Or flat out wrong? [Let me know!](https://github.com/cgetzen/golang-training/issues/new)
