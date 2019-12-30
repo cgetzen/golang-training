@@ -2,7 +2,7 @@
 
 ## Verification
 
-Each module will have a `test/` folder. To verify your knowledge, please create a branch and ensure that each `test/` passes CI. The completion board will be updated nightly.
+Each module will have a `test/` folder. To verify your knowledge, please clone and ensure that each `test/` passes CI.
 
 ## Organization
 
